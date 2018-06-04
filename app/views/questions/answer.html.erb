@@ -1,0 +1,26 @@
+
+
+<h1>Coach reply</h1>
+
+
+
+<div class="dialog">
+  <div class= "question">
+    <h3>Your question: </h3>
+    <p><%= @question %></p>
+  </div>
+
+  <div class= "answer">
+    <h3>Coach answer:</h3>
+    <% if @question == "I am going to work"
+        then%> <p>Great!</p>
+    <% elsif @question.include?("?")
+        then%> <p>Silly question, get dressed and go to work!</p>
+    <% else %>
+        <p>I don't care, get dressed and go to work!</p>
+    <% end %>
+  </div>
+
+    <%= link_to "Ask another question", "http://localhost:3000/ask" %>
+
+</div>
